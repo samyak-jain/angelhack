@@ -4,12 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon test.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "agora-rtc-sdk": "^2.3.1",
-    "jsdom": "^11.11.0"
+    "jsdom": "^11.11.0",
+    "navigator": "^1.0.1",
+    "puppeteer": "^1.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
   }
 }
