@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "560405194520",
+    "firebase_url": "https://angelhack-123.firebaseio.com",
+    "project_id": "angelhack-123",
+    "storage_bucket": "angelhack-123.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560405194520:android:0bb14c3cea2475f0",
+        "android_client_info": {
+          "package_name": "io.agora.openlive"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "560405194520-c7d878jie7taubiihf3i7rbag6r7d7ng.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "560405194520-c7d878jie7taubiihf3i7rbag6r7d7ng.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_RH4RdkypiuyY9pGNYkES787WdJqjCU8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
