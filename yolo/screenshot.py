@@ -17,10 +17,12 @@ tfnet = TFNet(options)
 
 def get_pred(img):
     preds = tfnet.return_predict(img)
-    print(preds)
     results = []
 
     for pred in preds:
+        if pred['label'] != 'person':
+            continue
+
         result = {}
         result['tl'] = [pred['topleft']['x'], pred['topleft']['y']]
         result['br'] = [pred['bottomright']['x'], pred['bottomright']['y']]
@@ -28,22 +30,33 @@ def get_pred(img):
 
     return results
 
+def view(img, annots):
+    cv2.imwrite('before.jpg', img)
+    for annot in annots:
+        x, y, x2, y2 = annot['tl'] + annot['br']
+        cv2.rectangle(img, (x, y), (x2, y2), (0,255,0), 2)
+    # cv2.imshow('sample', img)
+    cv2.imwrite('after.jpg', img)
+
 async def main():
-    browser = await launch({'executablePath': '/usr/bin/google-chrome'})
+    browser = await launch({'executablePath': '/usr/bin/google-chrome-stable'})
     page = await browser.newPage()
-    # await page.goto('http://192.168.14.147:8000/')
     await page.goto('http://unsting-relay.netlify.com')
 
     while(True):
         initial = time.time()
-        await asyncio.sleep(5)
-        img = await page.screenshot({'path': 'example'+str(initial)+'.png'})
+        # img = await page.screenshot({'path': 'example'+str(initial)+'.png'})
+        img = await page.screenshot()
         image = Image.open(io.BytesIO(img)).convert('RGB')
 
-        print(type(image))
         img = np.array(image)
+        img = np.roll(img, 1, axis=-1)
         print("array ", img.shape)
-        print(get_pred(img))
+        pred = get_pred(img)
+
+        if len(pred) > 0:
+            img = np.roll(img, 1, axis=-1)
+            view(img, pred)
 
     await browser.close()
 
