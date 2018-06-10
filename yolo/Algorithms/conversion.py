@@ -1,7 +1,7 @@
 import math
 
-l = 640.0
-b = 480.0
+l = 600
+b = 800
 max = math.sqrt(l**2 + b**2)
 min = math.sqrt(2)
 mid = [l//2, b//2]
@@ -9,6 +9,10 @@ lat = 12.9939455
 lon = 77.66040169999997
 const = 0.000002
 data = [{ 'br': [583, 479], 'tl': [165, 205]}, { 'br': [200, 200], 'tl': [300, 350]}]
+
+def get_locations(annots):
+    res = vals(annots['tl'][0], annots['tl'][1], annots['br'][0], annots['br'][1])
+    return calc(*res)
 
 def calc(dist, x, y, depth):
 
@@ -80,3 +84,4 @@ if __name__ == "__main__":
     for i in result:
         print(str(i['lat']) + "," + str(i['lon']) + ",a")
     print(str(lat) + "," + str(lon) + ",abc")
+
