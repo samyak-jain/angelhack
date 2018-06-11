@@ -2,9 +2,9 @@
 Module receives frames from the agora api and applies
 YOLO algorithm to every frame. Script emulates a browser
 in the python script on a server and parses frames off it
-<strong>requirements:</strong> chrome/chromium, refer requirements.txt
+requirements: chrome/chromium, refer requirements.txt
                 requires darkflow installed via python(refer docs)
-<strong>usage:</strong> run script using python3
+usage: run script using python3
         CLI args: executable path of the chrome/chromium browser
                     defaults to '/usr/bin/google-chrome-stable'
                     Video will be displayed everytime a person is
