@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=0.7, maximum-scale=0.7, minimum-scale=0.7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>unSting</title>
+    <!--<link href="https://fonts.googleapis.com/css?family=Lato|Muli" rel="stylesheet">-->
+    <link rel="manifest" href="./manifest.json">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/bundle.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col m9 s12" id="map"></div>
+        <div class="card" id="filter" style="position: absolute;z-index: 1000;top: 50px;left: 10px;padding: 20px;">
+            <h5 class="center-align">
+                Markers Legend
+            </h5>
+            <ul class="collection">
+                <li class="collection-item avatar">
+                    <img src="./img/drone-bee.png" alt="" class="circle">
+                    <span class="title">Drone</span>
+
+                </li>
+                <li class="collection-item avatar">
+                    <i class="material-icons circle yellow darken-4"></i>
+                    <span class="title">Hex</span>
+
+                </li>
+                <li class="collection-item avatar">
+                    <i class="material-icons circle red"></i>
+                    <span class="title">People</span>
+
+                </li>
+                <li class="collection-item avatar">
+                    <i class="material-icons circle blue"></i>
+                    <span class="title">Volunteers</span>
+                </li>
+            </ul>
+        </div>
+        <div class="col m3 s12" id="main">
+            <div id="scrollWrap">
+                <div class="messageWrap">
+                    <div style="" class="message user">
+                    <span class="message-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur esse explicabo ipsam itaque necessitatibus nemo placeat, quaerat tempore ullam? Blanditiis, fugit inventore labore molestias rem reprehenderit tempore totam velit!
+                    </span>
+                        <div class="triangle"></div>
+                    </div>
+                </div>
+                <div class="messageWrap">
+                    <div style="" class="message bot">
+                    <span class="message-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur esse explicabo ipsam itaque necessitatibus nemo placeat, quaerat tempore ullam? Blanditiis, fugit inventore labore molestias rem reprehenderit tempore totam velit!
+                    </span>
+                        <div class="triangle"></div>
+                    </div>
+                </div>
+                <div class="messageWrap">
+                    <div style="" class="message user">
+                    <span class="message-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur esse explicabo ipsam itaque necessitatibus nemo placeat, quaerat tempore ullam? Blanditiis, fugit inventore labore molestias rem reprehenderit tempore totam velit!
+                    </span>
+                        <div class="triangle"></div>
+                    </div>
+                </div>
+                <div class="messageWrap">
+                    <div style="" class="message user">
+                    <span class="message-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur esse explicabo ipsam itaque necessitatibus nemo placeat, quaerat tempore ullam? Blanditiis, fugit inventore labore molestias rem reprehenderit tempore totam velit!
+                    </span>
+                        <div class="triangle"></div>
+                    </div>
+                </div>
+                <div class="messageWrap">
+                    <div style="" class="message bot">
+                    <span class="message-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur esse explicabo ipsam itaque necessitatibus nemo placeat, quaerat tempore ullam? Blanditiis, fugit inventore labore molestias rem reprehenderit tempore totam velit!
+                    </span>
+                        <div class="triangle"></div>
+                    </div>
+                </div>
+                <div class="messageWrap">
+                    <div style="" class="message bot">
+                    <span class="message-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur esse explicabo ipsam itaque necessitatibus nemo placeat, quaerat tempore ullam? Blanditiis, fugit inventore labore molestias rem reprehenderit tempore totam velit!
+                    </span>
+                        <div class="triangle"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="input" class="input-field col s12">
+                <input id="typeMsg" type="text" placeholder="Type something ..">
+                <a id="send" class="btn btn-floating"><i class="material-icons">send</i></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        let mapRes;
+        let mapPromise=new Promise((res,rej)=>{
+            mapRes=res;
+        });
+        function initMap(){
+            mapRes(true);
+        }
+    </script>
+    <script src="js/bundle.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBefYkVP-KNw99NN7ZprCRXs5GtbtvBSD4&callback=initMap" async defer="defer"></script>
+</body>
+</html>
