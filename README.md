@@ -1,5 +1,21 @@
-# angelhack
+# unSting
 
+End-to-end disaster recovery and management platform using decentralized swarm robotics (autonomous drones) using RTCs powered by agora.io to detect and track people in need of help. This information is relayed by our platform to people who are willing to help. The platform seamlessly integrates volunteers, people in need of help, and other interested parties. 
+
+## Drones
+
+![Drones](./Images/drone.gif)
+
+## Data dashboard
+
+![Data dashboard](./Images/data_dashboard.gif)
+
+## Volunteer app
+
+![Volunteer app](./Images/volunteer_app.gif)
+
+# angelhack
+----
 
 ## Components
 
@@ -28,5 +44,3 @@
 ## Ideas for future use
 
 1. Danger Classification
-
-
