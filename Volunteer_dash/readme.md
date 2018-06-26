@@ -1,4 +1,4 @@
-# Unstung Volunteer Dashboard
+# Unsting Volunteer Dashboard
 
 **Steps to run :**
 
