@@ -1,4 +1,4 @@
-# Unstung Dashboard
+# Unsting Dashboard
 
 **Steps to run :**
 
