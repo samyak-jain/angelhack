@@ -20,7 +20,7 @@ if __name__ == "__main__":
     c = r * math.cos(math.radians(30)) - 0.00042
     
 	# R sin(60)
-	s = r * math.sin(math.radians(60))
+    s = r * math.sin(math.radians(60))
 
 	# Latitude and longitude values for 6 points of the hexagon
     x[0], y[0] = lat + r, lon
