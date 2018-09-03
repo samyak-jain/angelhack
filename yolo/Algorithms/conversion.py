@@ -33,8 +33,8 @@ data = [{ 'br': [583, 479], 'tl': [165, 205]}, { 'br': [200, 200], 'tl': [300, 3
 
 # Return:
 # GPS coordinates
-def get_locations(annots):
-    res = vals(annots['tl'][0], annots['tl'][1], annots['br'][0], annots['br'][1])
+def get_locations(x1, y1, x2, y2):
+    res = vals(x1, y1, x2, y2)
     return calc(*res)
 
 # Calculating new longitude and latitiude positions

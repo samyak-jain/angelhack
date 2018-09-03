@@ -59,7 +59,7 @@ def update_locations(annots):
     gps = []
     for annot in annots:
         x, y, x2, y2 = annot['tl'] + annot['br']
-        out = conversion.calc(x, y, x2, y2)
+        out = conversion.get_locations(x, y, x2, y2)
         gps.append(out)
 
     for i, data in enumerate(gps):
