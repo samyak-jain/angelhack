@@ -63,7 +63,15 @@ def update_locations(annots):
         gps.append(out)
 
     for i, data in enumerate(gps):
-        db.collection('help').document('person'+str(i)).set(data)
+        key = 'person'+str(i)
+        data = {
+            key: gps
+        }
+        doc = db.create_document(data)
+
+        if doc.exists():
+            print("Document '{0}' successfully created.".format(key))
+
 
 
 async def main(execpath):
