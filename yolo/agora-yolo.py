@@ -63,11 +63,14 @@ def update_locations(annots):
         gps.append(out)
 
     for i, data in enumerate(gps):
-        key = 'person'+str(i)
+        key = 'person' + str(i)
+
+        db.collection('help').document(key).set(data)  # publish to all subs
+
         data = {
-            key: gps
+            key: data
         }
-        doc = db.create_document(data)
+        doc = db.create_document(data)  # store in data warehouse
 
         if doc.exists():
             print("Document '{0}' successfully created.".format(key))
