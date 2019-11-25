@@ -58,8 +58,8 @@ The Progressive Web App (PWA) allows users to sign up as volunteers and aid in t
 
 ## Contributors
 
- - [@nishnash54]("https://github.com/nishnash54")
- - [@Souldiv]("https://github.com/Souldiv")
- - [@SuryaThiru]("https://github.com/SuryaThiru")
- - [@samyak-jain]("https://github.com/samyak-jain")
- - [@technophilic]("https://github.com/technophilic")
+ - [@nishnash54](https://github.com/nishnash54)
+ - [@Souldiv](https://github.com/Souldiv)
+ - [@SuryaThiru](https://github.com/SuryaThiru)
+ - [@samyak-jain](https://github.com/samyak-jain)
+ - [@technophilic](https://github.com/technophilic)
